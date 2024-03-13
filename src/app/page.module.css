@@ -5,3 +5,8 @@
   padding: 6rem;
   min-height: 100vh;
 }
+.main > h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: TsukuARdGothic-Regular;
+}

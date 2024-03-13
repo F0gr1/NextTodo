@@ -2,18 +2,27 @@
 import React, { useState } from "react";
 
 const TodoList = () => {
-  const [task, setTask] = useState(["task1", "task2", "task3"]);
-
+  const [tasks, setTasks] = useState(["task1", "task2", "task3"]);
+  const [task, setTask] = useState("");
   const addTask = () => {
-    setTask([...task, "task4"]);
+    setTasks([...tasks, task]);
   };
 
   return (
     <div>
-      {task.map((task, index) => (
-        <p key={index}>{task}</p>
-      ))}
-      <input type="text" />
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>
+            <input type="checkbox" />
+            {task}
+          </li>
+        ))}
+      </ul>
+      <input
+        type="text"
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
+      />
       <button onClick={addTask}>Add Task</button>
     </div>
   );
