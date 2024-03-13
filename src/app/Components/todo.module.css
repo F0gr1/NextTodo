@@ -1,0 +1,35 @@
+.container {
+  width: 70%;
+  height: 100%;
+}
+
+.inputTodo {
+  width: 100%;
+  padding: 3%;
+  margin: 5% 0;
+  font-size: 1.7rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  line-height: 1.5;
+  box-sizing: border-box; /* paddingが要素の幅を拡張しないようにボックスモデルを設定 */
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 3%;
+}
+
+.todo {
+  margin: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: gray;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
